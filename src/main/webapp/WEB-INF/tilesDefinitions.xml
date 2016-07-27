@@ -2,17 +2,29 @@
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
-       
-       
+
+
 <tiles-definitions>
-	 <definition name="base-template" template="WEB-INF/layout/basetemplate.jsp">
+	<definition name="base-template" template="/WEB-INF/layout/basetemplate.jsp">
 		<put-attribute name="title" value="" />
 		<put-attribute name="body" value="" />
 	</definition>
-	
+
 	<definition name="homepage" extends="base-template">
-		<put-attribute name="title" value="HomePage" />
-		<put-attribute name="body" value="/WEB-INF/views/homepage.jsp"/>
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/WEB-INF/views/homepage.jsp" />
 	</definition>
-	
+
+	<definition name="productsmanagement" extends="base-template">
+		<put-attribute name="title" value="Product Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/productsmanagement.jsp" />
+	</definition>
+
+	<definition name="productform" extends="base-template">
+		<put-attribute name="title" value="new product" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/productform.jsp" />
+	</definition>
+
 </tiles-definitions>
