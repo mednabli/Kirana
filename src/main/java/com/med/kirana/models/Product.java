@@ -7,8 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="products")
 public class Product {
 
 	@Id
@@ -18,6 +21,8 @@ public class Product {
 	private String description;
 	@ManyToMany
 	private List<Category> categories;
+	@OneToMany(mappedBy="product")
+	private List<ProductImage> images;
 	
 	
 	public Integer getId() {

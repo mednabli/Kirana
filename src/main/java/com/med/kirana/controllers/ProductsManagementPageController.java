@@ -20,6 +20,4 @@ public class ProductsManagementPageController {
 		model.addAttribute("products",productService.getAllProducts());
 		return "productsmanagement";
 	}
-	
-	
 }
